@@ -1,0 +1,33 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CosmicBrand</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body style="background-color: #9370DB;">
+<div th:replace="~{fragments/header :: header}">Header</div>
+
+
+<div class="contactform">
+    <form>
+        <div class="form-group">
+            <h1>Contact us</h1>
+            <label for="firstname">First name:</label>
+            <input type="firstname" class="form-control" id="firstname" placeholder="Enter first name.">
+            <label for="lastname">Last name:</label>
+            <input type="lastname" class="form-control" id="lastname" placeholder="Enter last name.">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <button type="submit" class="btn btn-primary submitbut">Submit</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
