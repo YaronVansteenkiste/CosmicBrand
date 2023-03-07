@@ -1,0 +1,45 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CosmicBrand</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}">Header</div>
+
+<section>
+    <div>
+        <h1 th:text="${product.getProductName()}">Producttitle</h1>
+    </div>
+    <div>
+        <div class="productimagesec">
+            image section
+        </div>
+        <div class="productinfo">
+            <div class="title">
+                <a class="producttitle" th:text="${product.getProductName()}"></a>
+            </div>
+            <div class="price">
+                <a class="productprice" th:text="${product.getPrice()} + ' euro'"></a>
+            </div>
+            <div class="description">
+                <a class="productdescription" th:text="${product.getProductDescription()}"></a>
+            </div>
+        </div>
+    </div>
+    <div class="product-largeinfo">
+        <h2>Description:</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum harum corrupti dicta, aliquam sequi voluptate quas.</p>
+    </div>
+</section>
+
+<div th:replace="~{fragments/footer :: footer}">footer</div>
+</body>
+</html>

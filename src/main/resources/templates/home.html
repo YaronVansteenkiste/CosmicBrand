@@ -22,7 +22,6 @@
     <div class="category-item">
         <h1 th:text="${category1}"></h1>
         <p>info category 1</p>
-        <img th:src="@{/image/{id}(id=1)}" />
         <button type="button" class="btn btn-primary btn-lg">Look C1</button>
     </div>
     <div class="category-item">
@@ -52,13 +51,14 @@
         </div>
         <div class="productinfo">
             <div class="title">
-                title
+                <a th:text="${product.getProductName()}"></a>
             </div>
             <div class="price">
-                price
+                <a th:text="${product.getPrice()}"></a>
+                <button type="button" class="btn btn-secondary">Buy</button>
             </div>
-            <div class="product-info">
-                product info
+            <div class="product-subinfo">
+                <a th:text="${product.getProductName()}"></a>
             </div>
         </div>
     </div>
@@ -74,7 +74,7 @@
             <div class="price">
                 price
             </div>
-            <div class="product-info">
+            <div class="product-subinfo">
                 product info
             </div>
         </div>
@@ -91,7 +91,7 @@
             <div class="price">
                 price
             </div>
-            <div class="product-info">
+            <div class="product-subinfo">
                 product info
             </div>
         </div>
@@ -108,7 +108,7 @@
             <div class="price">
                 price
             </div>
-            <div class="product-info">
+            <div class="product-subinfo">
                 product info
             </div>
         </div>
