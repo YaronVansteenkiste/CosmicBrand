@@ -52,10 +52,11 @@
         <div class="productinfo">
             <div class="title">
                 <a th:text="${product.getProductName()}"></a>
+                <a style="color: #9370DB;" th:text="${product.getPrice()}"></a>
             </div>
-            <div class="price">
-                <a th:text="${product.getPrice()}"></a>
-                <button type="button" class="btn btn-secondary">Buy</button>
+            <div>
+                <button onclick="location.href='product/1'" type="button" class="btn btn-secondary">Buy</button>
+
             </div>
             <div class="product-subinfo">
                 <a th:text="${product.getProductName()}"></a>
