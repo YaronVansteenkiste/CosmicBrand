@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 
 </head>
-<body style="background-color: #9370DB;">
+<body>
 <div th:replace="~{fragments/header :: header}">Header</div>
 
 <div class="section-logo">
@@ -22,9 +22,8 @@
     <div class="category-item">
         <h1 th:text="${category1}"></h1>
         <p>info category 1</p>
-        <button type="button" class="btn btn-primary btn-lg">Look C1
-
-        </button>
+        <img th:src="@{/image/{id}(id=1)}" />
+        <button type="button" class="btn btn-primary btn-lg">Look C1</button>
     </div>
     <div class="category-item">
         <h1 th:text="${category2}"></h1>
@@ -41,6 +40,10 @@
 <div class="recommendations">
     <h1>Recommended Products:</h1>
 </div>
+
+<section class="bubble">
+    <!-- content here -->
+</section>
 
 <div class="recommend-container">
     <div class="recommend-item">
@@ -111,3 +114,5 @@
         </div>
     </div>
 </div>
+<div th:replace="~{fragments/footer :: footer}">footer</div>
+</body>

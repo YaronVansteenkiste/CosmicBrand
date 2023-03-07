@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 
 </head>
-<body style="background-color: #9370DB;">
+<body>
 <div th:replace="~{fragments/header :: header}">Header</div>
 
 
@@ -19,15 +19,18 @@
     <form>
         <div class="form-group">
             <h1>Contact us</h1>
-            <label for="firstname">First name:</label>
-            <input type="firstname" class="form-control" id="firstname" placeholder="Enter first name.">
-            <label for="lastname">Last name:</label>
-            <input type="lastname" class="form-control" id="lastname" placeholder="Enter last name.">
-            <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-            <button type="submit" class="btn btn-primary submitbut">Submit</button>
+            <label for="firstName">First name:</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Enter first name.">
+            <label for="lastName">Last name:</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Enter last name.">
+            <label for="emailForm">Email address</label>
+            <input type="email" class="form-control" id="emailForm" placeholder="name@example.com">
+            <label for="messageForm">Message:</label>
+            <input type="email" class="form-control" id="messageForm" placeholder="Your message here:">
+            <button type="submit" class="btn btn-primary submit">Submit</button>
         </div>
     </form>
 </div>
+<div th:replace="~{fragments/footer :: footer}">footer</div>
 </body>
 </html>
