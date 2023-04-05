@@ -1,0 +1,40 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CosmicBrand</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}">Header</div>
+
+<div class="basket-canvas">
+  <h1>Basket:</h1>
+  <div class="basket-left-panel">
+    <a th:text="${basket.getSelectedProductNames()}"></a>
+  </div>
+  <div class="basket-right-panel">
+    <div class="basket-right-list">
+      <h3>Prices:</h3>
+      <a>price 1</a>
+      <a>price 2</a>
+      <a>price 3</a>
+    </div>
+    <div class="basket-right-total">
+      <h3>Total:</h3>
+    </div>
+    <div class="basket-right-pay">
+      <a th:text="${basket.productsTotalPrice}"></a>
+    </div>
+  </div>
+</div>
+
+<div th:replace="~{fragments/footer :: footer}">footer</div>
+</body>
+</html>

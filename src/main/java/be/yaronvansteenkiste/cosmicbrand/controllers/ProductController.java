@@ -12,12 +12,10 @@ import java.util.Optional;
 
 @Controller
 public class ProductController {
-
-
     @Autowired
     private ProductRepository productRepository;
 
-    @GetMapping("product/{id}")
+    @GetMapping("product/{id}/")
     public String product (Model model, @PathVariable Integer id) {
 
         if (id==null) return "home";

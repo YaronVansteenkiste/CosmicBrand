@@ -18,15 +18,15 @@
                 <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" th:if="${loggedin}"  href="login">Account<span class="sr-only">(current)</span></a>
-                <a class="nav-link" th:unless="${loggedin}"  href="login">Login<span class="sr-only">(current)</span></a>
+                <a class="nav-link" th:if="${login == null}" href="/login/">Login<span class="sr-only">(current)</span></a>
+                <a class="nav-link" th:if="${login != null}" th:text="${login.username}">Account<span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="contact">Service/contact <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/contact/">Service/contact <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="basket">Basket <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/basket/">Basket <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

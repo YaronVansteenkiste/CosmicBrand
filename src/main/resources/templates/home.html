@@ -22,7 +22,7 @@
     <div class="category-item">
         <h1 th:text="${category1}"></h1>
         <p>info category 1</p>
-        <button type="button" class="btn btn-primary btn-lg">Look C1</button>
+        <button onclick="location.href='productlist'" type="button" class="btn btn-primary btn-lg">Look C1</button>
     </div>
     <div class="category-item">
         <h1 th:text="${category2}"></h1>
@@ -51,15 +51,14 @@
         </div>
         <div class="productinfo">
             <div class="title">
-                <a th:text="${product.getProductName()}"></a>
-                <a style="color: #9370DB;" th:text="${product.getPrice()}"></a>
+                <a th:text="${product1.getProductName()}"></a>
+                <a style="color: #9370DB;" th:text="${product1.getPrice()}"></a>
             </div>
             <div>
-                <button onclick="location.href='product/1'" type="button" class="btn btn-secondary">Buy</button>
-
+                <button onclick="location.href='product/1/'" type="button" class="btn btn-secondary">Buy</button>
             </div>
             <div class="product-subinfo">
-                <a th:text="${product.getProductName()}"></a>
+                <a th:text="${product1.getProductName()}"></a>
             </div>
         </div>
     </div>
@@ -70,13 +69,14 @@
         </div>
         <div class="productinfo">
             <div class="title">
-                title
+                <a th:text="${product2.getProductName()}"></a>
+                <a style="color: #9370DB;" th:text="${product2.getPrice()}"></a>
             </div>
-            <div class="price">
-                price
+            <div>
+                <button onclick="location.href='product/2/'" type="button" class="btn btn-secondary">Buy</button>
             </div>
             <div class="product-subinfo">
-                product info
+                <a th:text="${product2.getProductName()}"></a>
             </div>
         </div>
     </div>
@@ -87,13 +87,14 @@
         </div>
         <div class="productinfo">
             <div class="title">
-                title
+                <a th:text="${product3.getProductName()}"></a>
+                <a style="color: #9370DB;" th:text="${product3.getPrice()}"></a>
             </div>
-            <div class="price">
-                price
+            <div>
+                <button onclick="location.href='product/3/'" type="button" class="btn btn-secondary">Buy</button>
             </div>
             <div class="product-subinfo">
-                product info
+                <a th:text="${product3.getProductName()}"></a>
             </div>
         </div>
     </div>
@@ -104,16 +105,18 @@
         </div>
         <div class="productinfo">
             <div class="title">
-                title
+                <a th:text="${product4.getProductName()}"></a>
+                <a style="color: #9370DB;" th:text="${product4.getPrice()}"></a>
             </div>
-            <div class="price">
-                price
+            <div>
+                <button onclick="location.href='product/4/'" type="button" class="btn btn-secondary">Buy</button>
             </div>
             <div class="product-subinfo">
-                product info
+                <a th:text="${product4.getProductName()}"></a>
             </div>
         </div>
     </div>
+
 </div>
 <div th:replace="~{fragments/footer :: footer}">footer</div>
 </body>

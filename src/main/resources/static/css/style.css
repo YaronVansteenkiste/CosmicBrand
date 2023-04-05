@@ -98,6 +98,7 @@
     text-align: center;
     height: auto;
     width: 200px;
+    margin: 20px;
 }
 
 .productphoto {
@@ -108,15 +109,18 @@
 
 .title {
     display: inline-block;
-    color: black;
+    color: #9F2B68;
     font-weight: bold;
     width: 80%;
     text-align: left;
+    font-size: 25px;
 }
 
 .price {
     color: black;
     display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .product-subinfo {
@@ -149,7 +153,7 @@
 
 .productinfo {
     display: inline-grid;
-    width: auto;
+    width: 48%;
     height: auto;
 }
 
@@ -158,6 +162,31 @@
     margin-bottom: 200px;
 }
 
-.price {
-
+.basket-canvas {
+    margin: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.basket-left-panel {
+    display: inline-grid;
+    height: 80%;
+    width: 60%;
+}
+
+.basket-right-panel {
+    display: inline-grid;
+    width: 39%;
+}
+
+.basket-right-list {
+    display: inline-grid;
+    text-align: left;
+}
+
+.products-container {
+    display:inline-grid;
+    grid-template-columns: auto auto auto auto;
+    text-align: center;
+    margin: auto;
+}
+
